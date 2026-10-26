@@ -6,7 +6,7 @@ a SQL Server data warehouse (Medallion architecture) with a Power BI dashboard.
 > 🚧 Work in progress
 
 ## Architecture
-![Architecture](docs/architecture.png)
+![Architecture](docs/architecture.drawio.png)
 
 ## Tech Stack
 SQL Server · T-SQL · Power BI · Git · Draw.io

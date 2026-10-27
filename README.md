@@ -26,6 +26,7 @@ SQL Server · T-SQL · Power BI · Git · Draw.io
 | Business keys | `<entity>_id` | `order_id` |
 | Technical columns | `dwh_` prefix | `dwh_load_date` |
 | Procedures | `load_<layer>` | `bronze.load_bronze` |
+| SQL scripts | `ddl_<layer>.sql`, `proc_load_<layer>.sql` | `ddl_bronze.sql` |
 
 ## Dataset
 [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)

@@ -23,6 +23,10 @@ End-to-end analytics project on the Olist Brazilian e-commerce dataset (2016–2
 
 Source CSV files → **Bronze** (raw) → **Silver** (cleansed) → **Gold** (star schema) → **Power BI**
 
+### Data Model
+
+![Data Model](docs/data_model.png)
+
 Full design, requirements, and KPI definitions are in [`docs/`](docs/).
 
 ## Setup

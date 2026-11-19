@@ -79,11 +79,11 @@ scripts/
    10. `scripts/04_analytics/views/cohort_retention.sql`
    11. `scripts/04_analytics/views/seller_scorecard.sql`
    12. `scripts/orchestration/proc_run_pipeline.sql`
-4. Run the full pipeline. Replace the placeholder with the full path to your `datasets/` folder:
+4. **Load the data (run every time the source files change).** Replace the placeholder with the full path to your `datasets/` folder:
    ```sql
    EXEC audit.run_pipeline @source_path = N'<path to datasets folder>';
    ```
-   Check the audit log for row counts and errors.
+   This loads Bronze, Silver, and Gold, runs the quality gates, and logs the run in `audit.load_log`.
 5. Run the data quality tests:
    ```sql
    EXEC audit.run_silver_tests;

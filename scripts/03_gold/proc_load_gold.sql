@@ -73,4 +73,3 @@ BEGIN
 END;
 GO
 
---EXEC gold.load_gold;

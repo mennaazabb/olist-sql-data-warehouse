@@ -61,20 +61,22 @@ FROM silver.sellers;
 GO
 
 -- 4. dim_date: one row per calendar day
+-- 4. dim_date: one row per calendar day
 CREATE OR ALTER VIEW gold_views.dim_date AS
 WITH bounds AS (
     SELECT DATEFROMPARTS(YEAR(MIN(order_purchase_timestamp)), 1, 1) AS start_date,
            DATEFROMPARTS(YEAR(MAX(COALESCE(order_estimated_delivery_date, order_purchase_timestamp))), 12, 31) AS end_date
     FROM silver.orders
 ),
-numbers AS (
-    SELECT TOP ((SELECT DATEDIFF(DAY, start_date, end_date) + 1 FROM bounds))
-           ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) - 1 AS n
+tally AS (
+    SELECT ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) - 1 AS n
     FROM sys.all_objects a CROSS JOIN sys.all_objects b
 ),
 dates AS (
-    SELECT DATEADD(DAY, n, (SELECT start_date FROM bounds)) AS full_date
-    FROM numbers
+    SELECT DATEADD(DAY, t.n, b.start_date) AS full_date
+    FROM bounds b
+    CROSS JOIN tally t
+    WHERE t.n < DATEDIFF(DAY, b.start_date, b.end_date) + 1
 )
 SELECT CAST(FORMAT(full_date, 'yyyyMMdd') AS INT) AS date_key,
        full_date,

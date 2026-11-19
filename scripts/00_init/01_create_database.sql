@@ -34,3 +34,5 @@ CREATE SCHEMA gold;
 GO
 CREATE SCHEMA audit;
 GO
+CREATE SCHEMA analytics;
+GO

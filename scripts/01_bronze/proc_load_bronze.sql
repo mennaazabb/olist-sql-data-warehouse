@@ -10,7 +10,7 @@ Purpose   : Loads the 9 Olist CSV files into the Bronze tables.
             end if any file failed.
 Parameter : @source_path  folder that contains the CSV files
 Usage     : EXEC bronze.load_bronze
-                @source_path = N'D:\Baraa\olist\olist_dataset';
+                @source_path = N'C:\path\to\your\datasets';
 =============================================================
 */
 
@@ -18,7 +18,7 @@ USE OlistDWH;
 GO
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze
-    @source_path NVARCHAR(500) = N'D:\Baraa\olist\olist_dataset'
+    @source_path NVARCHAR(500)
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -117,4 +117,3 @@ BEGIN
 END;
 GO
 
---EXEC bronze.load_bronze @source_path = N'D:\Baraa\olist\olist_dataset';

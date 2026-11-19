@@ -8,14 +8,14 @@ End-to-end analytics project on the Olist Brazilian e-commerce dataset (2016–2
 
 ![Executive](docs/screenshots/01_executive.PNG)
 
-| Page | Answers |
-|---|---|
-| Executive | Revenue and orders trend, geography (Q1, Q2) |
-| Sales & Products | Categories, payments, installments, freight (Q5, Q6, Q10) |
-| Customers | RFM segments, repeat rate, cohorts (Q3, Q4) |
-| Delivery & Reviews | Late rate and its effect on reviews (Q7, Q8) |
-| Sellers | Seller status and risk (Q9) |
-| About | KPI definitions and data notes |
+| Page # | Page | Answers | Screenshot |
+|---|---|---|---|
+| 1 | Executive | Revenue and orders trend, geography (Q1, Q2) | [View 01](docs/screenshots/01_executive.PNG) |
+| 2 | Sales & Products | Categories, payments, installments, freight (Q5, Q6, Q10) | [View 02](docs/screenshots/02_sales.PNG) |
+| 3 | Customers | RFM segments, repeat rate, cohorts (Q3, Q4) | [View 03](docs/screenshots/03_customers.PNG) |
+| 4 | Delivery & Reviews | Late rate and its effect on reviews (Q7, Q8) | [View 04](docs/screenshots/04_delivery.PNG) |
+| 5 | Sellers | Seller status and risk (Q9) | [View 05](docs/screenshots/05_sellers.PNG) |
+| 6 | About | KPI definitions and data notes | [View 06](docs/screenshots/06_about.PNG) |
 
 ## Architecture
 
